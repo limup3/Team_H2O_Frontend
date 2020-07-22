@@ -1,10 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import {Map} from "./index"
 const Ambulance = () => (
 
 <Container>
-<h1>응급차 호출</h1>
+<br/>
+<Map/>
 </Container>
 
 

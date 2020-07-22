@@ -47,7 +47,7 @@ export default function Login() {
 
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                    Sign in
+                    Login
                 </Typography>
                 <form className={classes.form} noValidate>
                     <TextField
@@ -55,10 +55,10 @@ export default function Login() {
                         margin="normal"
                         required
                         fullWidth
-                        id="email"
-                        label="Email Address"
-                        name="email"
-                        autoComplete="email"
+                        id="userId"
+                        label="userId"
+                        name="userId"
+                        autoComplete="userId"
                         autoFocus
                     />
                     <TextField
@@ -83,7 +83,7 @@ export default function Login() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign In
+                        Login
                     </Button>
                     <Grid container>
                         <Grid item xs>
@@ -92,7 +92,7 @@ export default function Login() {
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link href="/SignUp" variant="body2">
                                 {"Don't have an account? Sign Up"}
                             </Link>
                         </Grid>

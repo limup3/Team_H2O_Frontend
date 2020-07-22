@@ -3,6 +3,9 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -30,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MyPage() {
+export default function SignUp() {
   const classes = useStyles();
 
   return (
@@ -40,7 +43,7 @@ export default function MyPage() {
         <Avatar className={classes.avatar}>
         </Avatar>
         <Typography component="h1" variant="h5">
-          MyPage
+          Sign up
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -54,6 +57,17 @@ export default function MyPage() {
                 id="userName"
                 label="userName"
                 autoFocus
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="userId"
+                label="userId"
+                name="userId"
+                autoComplete="userId"              
               />
             </Grid>
             <Grid item xs={12}>
@@ -80,6 +94,10 @@ export default function MyPage() {
           />
             </Grid>
             <Grid item xs={12}>
+              <FormControlLabel
+                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                label="I want to receive inspiration, marketing promotions and updates via email."
+              />
             </Grid>
           </Grid>
           <Button
@@ -89,10 +107,13 @@ export default function MyPage() {
             color="primary"
             className={classes.submit}
           >
-            Change
+            Sign Up
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
+              <Link href="/Login" variant="body2">
+                Already have an account? Sign in
+              </Link>
             </Grid>
           </Grid>
         </form>
