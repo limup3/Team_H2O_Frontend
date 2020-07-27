@@ -1,102 +1,101 @@
-import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { Grid } from '@material-ui/core';
+import { Container } from "react-bootstrap";
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
+const useStyles = makeStyles({
+  root: {
+    minWidth: 150,
+    margin: "20px",
+    justifyContent: 'center'
+  },
+  title: {
+    fontSize: 12,
+  },
+  pos: {
+    marginBottom: 14,
+  },
+});
 
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
-
-export default function MyPage() {
+const Mypage = () => {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          MyPage
+    <div>
+      <br/>    
+<Container>
+<Grid
+  container
+  justify="flex-end" 
+>
+<Button variant="contained" color="secondary" href="/User_Modify" >회원 정보 수정</Button>
+</Grid>
+<Grid
+  container
+  direction="row"
+  justify="center"
+  alignItems="center"
+>
+          <Card className={classes.root} variant="outlined">
+          <CardContent >
+          <Typography variant="h5" component="h2">
+          나의 글목록
         </Typography>
-        <form className={classes.form} noValidate>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="userName"
-                name="userName"
-                variant="outlined"
-                required
-                fullWidth
-                id="userName"
-                label="userName"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-            </Grid>
-            <Grid item xs={12}>
-            <TextField
-            variant="outlined"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-          />
-            </Grid>
-            <Grid item xs={12}>
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Change
-          </Button>
-          <Grid container justify="flex-end">
-            <Grid item>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
-    </Container>
-  );
-}
+          </CardContent>
+          <CardActions className={classes.root}>
+            <Button size="medium">10</Button>
+          </CardActions>
+        </Card>
+        
+        <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Typography variant="h5" component="h2">
+          자주가는 병원
+        </Typography>
+          </CardContent>
+          <CardActions className={classes.root}>
+            <Button size="medium">10</Button>
+          </CardActions>
+        </Card>
+        
+        <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Typography variant="h5" component="h2">
+          나의 처방전
+        </Typography>
+          </CardContent>
+          <CardActions className={classes.root}>
+            <Button size="medium">10</Button>
+          </CardActions>
+        </Card>
+</Grid>
+<Grid
+  className={classes.root}
+  container
+  direction="column"
+  justify="center" 
+  alignItems="center"
+>
+  
+<Button variant="outlined" color="primary" size="large">결제 카드 등록/변경</Button>
+</Grid>
+<Grid
+  className={classes.root}
+  container
+  direction="column"
+  justify="center" 
+  alignItems="center"
+>
+<Button variant="outlined" color="primary" size="large">&nbsp;&nbsp;&nbsp;&nbsp; 1:1 문의하기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </Button>
+</Grid>
+
+</Container>
+</div>
+      );
+    }
+export default Mypage

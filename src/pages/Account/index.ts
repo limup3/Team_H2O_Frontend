@@ -1,8 +1,8 @@
 
 import Login from './Login'
-import Logout from './Logout'
-import MyPage from './MyPage'
+import Mypage from './Mypage'
+import User_Modify from './User_Modify'
 import SignUp from './SignUp'
 export {
-    Login, Logout, MyPage, SignUp
+    Login, User_Modify, Mypage, SignUp
 }

@@ -19,6 +19,7 @@
     "mdbreact": "^4.27.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
+    "react-circle": "^1.1.1",
     "react-countdown": "^2.2.1",
     "react-dom": "^16.13.1",
     "react-moment-countdown": "^0.4.1",

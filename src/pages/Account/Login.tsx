@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     //SIGN IN 버튼 정렬
 }));
 
-export default function Login() {
+const Login = () => {
     const classes = useStyles();
     return (
         <Container component="main" maxWidth="xs">
@@ -102,3 +102,4 @@ export default function Login() {
         </Container>
     );
 }
+export default Login
